@@ -5,8 +5,9 @@ REM Author: Peter Nordin
 REM Change these to suit your needs
 set buildroot=c:\Qt\build
 set mingw64dir=c:\Qt\x86_64-4.9.3-release-posix-seh-rt_v4-rev1\mingw64
-set srcname=qt-everywhere-opensource-src-5.6.2
-set installdirname=qt-5.6.2-x64-mingw493r4-seh-rev1
+set srcname=qt-everywhere-opensource-src-5.6.3
+set srcsuffix=zip
+set installdirname=qt-5.6.3-x64-mingw493r4-seh-rev1
 set opensslpath=%buildroot%\openssl-1.0.2l\dist
 set icuversion=56
 set icupath=%buildroot%\icu\dist
@@ -24,7 +25,7 @@ set icupathfwd=%icupath:\=/%
 set PATH=C:\Perl64\bin;C:\Python27;C:\Program Files\7-Zip;%PATH%
 
 cd /D %buildroot%
-if not exist %srcname% 7z.exe x %srcname%.7z || echo Source directory already exist, does not unzip again, it takes to long
+if not exist %srcname% 7z.exe x %srcname%.%srcsuffix% || echo Source directory already exist, does not unzip again, it takes to long
 
 if not exist %srcname%-build mkdir %srcname%-build
 cd /D %srcname%-build
