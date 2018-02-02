@@ -8,7 +8,7 @@ set mingw64dir=c:\Qt\x86_64-4.9.3-release-posix-seh-rt_v4-rev1\mingw64
 set srcname=qt-everywhere-opensource-src-5.6.3
 set srcsuffix=zip
 set installdirname=qt-5.6.3-x64-mingw493r4-seh-rev1
-set opensslpath=%buildroot%\openssl-1.0.2l\dist
+set opensslpath=%buildroot%\openssl-1.0.2n\dist
 set icuversion=56
 set icupath=%buildroot%\icu\dist
 

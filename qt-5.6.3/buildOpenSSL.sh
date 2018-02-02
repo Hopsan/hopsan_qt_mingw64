@@ -3,7 +3,7 @@
 # Change these to suit your needs
 buildroot=/c/Qt/build
 mingw64dir=/c/Qt/x86_64-4.9.3-release-posix-seh-rt_v4-rev1/mingw64
-opensslname=openssl-1.0.2l
+opensslname=openssl-1.0.2n
 
 
 # Automatic code starts here
