@@ -7,16 +7,15 @@ REM Settings. Change these to suit your needs
 REM -----------------------------------------------------------------------
 set buildroot=%~dp0
 
-set mingw64_path=c:\Qt\x86_64-4.9.3-release-posix-seh-rt_v4-rev1\mingw64
-set qtbinpatcher_release=%buildroot%\qtbinpatcher-2.2.0-win-x64.zip
+set target_install_dir=qt-5.6.3-x64-mingw494-posix-seh-rt_v5-rev0
 
+set mingw64_path=C:\hopsan-dev\x86_64-4.9.4-release-posix-seh-rt_v5-rev0\mingw64
 set qt_src_name=qt-everywhere-opensource-src-5.6.3
 set qt_src_suffix=zip
 
+set qtbinpatcher_release=%buildroot%\qtbinpatcher-2.2.0-win-x64.zip
 set openssl_name=openssl-1.0.2n
 set icu_version=56
-
-set target_install_dir=qt-5.6.3-x64-mingw493r4-seh-rev1
 
 REM Add tools to PATH
 set PATH=C:\Perl64\bin;C:\Python27;C:\Program Files\7-Zip;%PATH%

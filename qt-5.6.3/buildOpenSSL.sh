@@ -2,7 +2,7 @@
 
 # Change these to suit your needs
 buildroot=$(dirname $(readlink -f $0))
-mingw64_path=/c/Qt/x86_64-4.9.3-release-posix-seh-rt_v4-rev1/mingw64
+mingw64_path=/c/hopsan-dev/x86_64-4.9.4-release-posix-seh-rt_v5-rev0/mingw64
 openssl_name=openssl-1.0.2n
 
 
