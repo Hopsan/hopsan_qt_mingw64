@@ -56,7 +56,7 @@ set QMAKESPEC=
 set QTDIR=
 set MAKE_COMMAND=
 REM call configure.bat -prefix %installpathfwd% -debug-and-release -opensource -confirm-license -platform win32-g++ -c++11 -icu -opengl desktop -openssl -dbus -audio-backend -plugin-sql-sqlite -qt-zlib -qt-libpng -qt-libjpeg -qt-style-windowsxp -qt-style-windowsvista -nomake tests -nomake examples -I %icupathfwd%/include -I %opensslpathfwd%/include -L %icupathfwd%/lib -L %opensslpathfwd%/lib
-call %buildroot%\%qt_src_name%\configure.bat -prefix %installpathfwd% -debug-and-release -opensource -confirm-license -platform win32-g++ -c++11 -opengl desktop -openssl -dbus -audio-backend -plugin-sql-sqlite -qt-zlib -qt-libpng -qt-libjpeg -nomake tests -nomake examples -I %opensslpathfwd%/include -L %opensslpathfwd%/lib
+call %buildroot%\%qt_src_name%\configure.bat -prefix %installpathfwd% -debug-and-release -opensource -confirm-license -platform win32-g++ -c++11 -icu -opengl desktop -openssl -dbus -audio-backend -plugin-sql-sqlite -qt-zlib -qt-libpng -qt-libjpeg -nomake tests -nomake examples -I %opensslpathfwd%/include -I %icupathfwd%/include -L %opensslpathfwd%/lib -L %icupathfwd%/lib
 
 echo.
 echo ==============================
