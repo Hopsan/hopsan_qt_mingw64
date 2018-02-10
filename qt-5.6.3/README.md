@@ -12,6 +12,7 @@ Build scripts for a custom version of the Qt libraries with QtWebKit compiled wi
 - GnuWin32 http://gnuwin32.sourceforge.net/packages.html (IMPORTANT! Install to a path without spaces (Not! in Program File (x86))
   - Gperf
   - Grep
+  - Sed
 - WinFlexBison https://github.com/lexxmark/winflexbison
   - https://sourceforge.net/projects/winflexbison/files/win_flex_bison-2.4.12.zip/download
   - Unpack wherever (without spaces), I abused c:\GnuWin32\bin 

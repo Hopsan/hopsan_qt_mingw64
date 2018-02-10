@@ -17,12 +17,19 @@ cd /D %buildroot%
 if not exist %webkit_src_dir% 7z.exe x %webkit_src_dir%.zip || echo Source directory already exist, does not unzip again, it takes to long
 cd %webkit_src_dir%
 
+REM Add missing include (only problem in debug mode)
+sed "/#include \"Settings.h\"/a#include <wtf/text/CString.h>" -i Source/WebCore/loader/icon/IconController.cpp
+
 REM Build minimal QtWebkit
 REM set MAKE_COMMAND=mingw32-make -j6
+perl Tools\Scripts\build-webkit --qt --debug --minimal --no-webkit2 --install-headers=%QTDIR%\include --install-libs=%QTDIR%\lib --qmakearg="DEFINES+=\"ENABLE_PLUGIN_PACKAGE_SIMPLE_HASH=1\"" --qmakearg="QMAKE_CXXFLAGS+=-Wa,-mbig-obj"
+if ERRORLEVEL 1 goto end
 perl Tools\Scripts\build-webkit --qt --release --minimal --no-webkit2 --install-headers=%QTDIR%\include --install-libs=%QTDIR%\lib --qmakearg="DEFINES+=\"ENABLE_PLUGIN_PACKAGE_SIMPLE_HASH=1\"" 
 if ERRORLEVEL 1 goto end
 
 REM Install into the qt_install_directory
+perl Tools\Scripts\build-webkit --qt --debug --minimal --no-webkit2 --install-headers=%QTDIR%\include --install-libs=%QTDIR%\lib --qmakearg="DEFINES+=\"ENABLE_PLUGIN_PACKAGE_SIMPLE_HASH=1\"" --makeargs="install"
+if ERRORLEVEL 1 goto end
 perl Tools\Scripts\build-webkit --qt --release --minimal --no-webkit2 --install-headers=%QTDIR%\include --install-libs=%QTDIR%\lib --qmakearg="DEFINES+=\"ENABLE_PLUGIN_PACKAGE_SIMPLE_HASH=1\"" --makeargs="install"
 if ERRORLEVEL 1 goto end
 
