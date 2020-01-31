@@ -1,0 +1,9 @@
+openssl-*/
+icu-56*/
+qt*/
+ruby*/
+gnuwin32*/
+win_flex_bison*/
+*.zip
+*.7z
+*.gz
